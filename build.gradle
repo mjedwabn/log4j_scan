@@ -26,12 +26,15 @@ repositories {
 }
 
 dependencies {
-//    runtimeOnly ('org.apache.zookeeper:zookeeper:3.4.6') {
-//        exclude group: 'log4j', module: 'log4j'
- //       exclude group: 'org.slf4j', module: 'slf4j-log4j12'
- //   }
+    runtimeOnly ('org.apache.zookeeper:zookeeper:3.4.6') {
+        exclude group: 'log4j', module: 'log4j'
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
     
-    runtimeOnly group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.16.0'
+  configurations.runtimeOnly {
+    exclude group: 'log4j', module: 'log4j'
+    exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+  }
 }
 
 jacocoTestReport {
