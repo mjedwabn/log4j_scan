@@ -26,44 +26,12 @@ repositories {
 }
 
 dependencies {
-    // JakartaEE
-    compileOnly 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
-    compileOnly 'jakarta.activation:jakarta.activation-api:1.2.1'
-    compileOnly 'javax.activation:activation:1.1.1'
-    compileOnly 'com.fasterxml.jackson.core:jackson-databind:2.12.4'
-    compileOnly 'com.fasterxml.jackson.core:jackson-core:2.12.4'
-    compileOnly 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.4'
-    compileOnly 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.12.4'
-    implementation 'com.fasterxml.jackson.module:jackson-module-paranamer:2.12.4'
-
-    // MicroProfile
-    compileOnly 'org.eclipse.microprofile.metrics:microprofile-metrics-api:3.0'
-    compileOnly('org.eclipse.microprofile.health:microprofile-health-api:3.1') {
-        exclude group: 'javax.inject', module: 'javax.inject'
-    }
-    compileOnly 'org.eclipse.microprofile.config:microprofile-config-api:2.0'
-
-    implementation 'javax.cache:cache-api:1.1.1'
-    runtimeOnly 'org.infinispan:infinispan-cdi-embedded:12.1.7.Final'
-    runtimeOnly 'org.infinispan:infinispan-jcache:12.1.7.Final'
-
-
-    compileOnly 'org.jboss.ejb3:jboss-ejb3-ext-api:2.3.0.Final'
-
-    implementation 'io.projectreactor.rabbitmq:reactor-rabbitmq:1.5.3'
-    implementation ('org.apache.curator:curator-recipes:4.2.0') {
-        exclude group: 'org.apache.zookeeper', module: 'zookeeper'
-        exclude group: 'log4j', module: 'log4j'
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    }
     runtimeOnly ('org.apache.zookeeper:zookeeper:3.4.6') {
         exclude group: 'log4j', module: 'log4j'
         exclude group: 'org.slf4j', module: 'slf4j-log4j12'
     }
-    implementation 'io.reactivex.rxjava3:rxjava:3.1.0'
-    implementation 'org.eclipse.microprofile.fault-tolerance:microprofile-fault-tolerance-api:3.0'
-    implementation 'io.lettuce:lettuce-core:6.1.4.RELEASE'
-    implementation 'org.liquibase:liquibase-cdi:4.0.0'
+    
+    runtimeOnly group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.16.0'
 }
 
 jacocoTestReport {
