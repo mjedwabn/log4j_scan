@@ -35,24 +35,24 @@ repositories {
 
 dependencies {
     // JakartaEE
-    compileOnly 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
-    compileOnly 'org.jboss.resteasy:resteasy-jaxrs:3.15.1.Final'
-    compileOnly 'org.jboss.resteasy:resteasy-jackson2-provider:3.15.1.Final'
-    compileOnly 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.12.1'
-    compileOnly 'com.fasterxml.jackson.core:jackson-core:2.12.1'
-    compileOnly 'com.fasterxml.jackson.core:jackson-databind:2.12.1'
-    compileOnly 'com.fasterxml.jackson.core:jackson-annotations:2.12.1'
-    compileOnly 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.1'
+    implementation 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
+    implementation 'org.jboss.resteasy:resteasy-jaxrs:3.15.1.Final'
+    implementation 'org.jboss.resteasy:resteasy-jackson2-provider:3.15.1.Final'
+    implementation 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.12.1'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.12.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.1'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.12.1'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.1'
     implementation 'javax.xml.bind:jaxb-api:2.3.0'
 
     // MicroProfile
-    compileOnly('org.eclipse.microprofile.health:microprofile-health-api:3.0') {
+    implementation('org.eclipse.microprofile.health:microprofile-health-api:3.0') {
         exclude group: 'javax.inject', module: 'javax.inject'
     }
-    compileOnly 'org.eclipse.microprofile.rest.client:microprofile-rest-client-api:2.0'
-    compileOnly 'org.eclipse.microprofile.metrics:microprofile-metrics-api:3.0'
-    compileOnly 'org.eclipse.microprofile.config:microprofile-config-api:2.0'
-    compileOnly 'org.eclipse.microprofile.openapi:microprofile-openapi-api:2.0'
+    implementation 'org.eclipse.microprofile.rest.client:microprofile-rest-client-api:2.0'
+    implementation 'org.eclipse.microprofile.metrics:microprofile-metrics-api:3.0'
+    implementation 'org.eclipse.microprofile.config:microprofile-config-api:2.0'
+    implementation 'org.eclipse.microprofile.openapi:microprofile-openapi-api:2.0'
 
     // JCache
     implementation 'javax.cache:cache-api:1.1.0'
