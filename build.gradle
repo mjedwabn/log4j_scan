@@ -22,8 +22,11 @@ dependencies {
 
 //    runtimeOnly 'org.apache.zookeeper:zookeeper:3.4.6'
 
-    runtimeOnly('org.apache.zookeeper:zookeeper:3.4.6') {
-        exclude group: 'log4j', module: 'log4j'
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    }
+//    runtimeOnly('org.apache.zookeeper:zookeeper:3.4.6') {
+//        exclude group: 'log4j', module: 'log4j'
+//        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+//    }
+
+
+    testImplementation 'org.apache.zookeeper:zookeeper:3.4.6'
 }
